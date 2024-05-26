@@ -1,0 +1,7 @@
+{
+  "name": "AdventureNow",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
