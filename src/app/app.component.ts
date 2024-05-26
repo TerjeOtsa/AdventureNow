@@ -7,7 +7,7 @@ import { ActivityService } from './services/activity.service';
   styleUrls: ['./app.component.scss']   // Ensure this file exists in the same directory
 })
 export class AppComponent implements OnInit {
-  activity: string = '';  // Provide a default value to avoid the error
+  activity: string = '';  // Provide a default value
   suggestions: string[] = [];
   timeValue = 30;
   intensityValue = 5;
@@ -34,11 +34,12 @@ export class AppComponent implements OnInit {
   }
 
   addActivity(activityName: string, activityTime: number, activityIntensity: number) {
-    this.activityService.addActivity(activityName, activityTime, activityIntensity, this.getSelectedCity())
-      .subscribe(data => {
-        alert(data.message);
-      });
-  }
+  this.activityService.addActivity(activityName, activityTime, activityIntensity, this.getSelectedCity())
+    .subscribe(data => {
+      alert(data.message);
+    });
+}
+
 
   removeActivity(activityToRemove: string) {
     this.activityService.removeActivity(activityToRemove, this.getSelectedCity())
