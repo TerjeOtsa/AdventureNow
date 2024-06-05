@@ -1,0 +1,6 @@
+{
+  "appId": "com.yourdomain.adventurenow",
+  "appName": "AdventureNow",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
